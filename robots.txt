@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://idriz90.github.io/daily-shot/sitemap.xml
