@@ -131,3 +131,37 @@ body{overflow-x:hidden}.ritual::before{top:calc(var(--section) - 1rem)}
 @media(prefers-reduced-motion:reduce){
   .mobile-quick-actions a{transition:none!important}
 }
+
+
+/* Final mobile quick-action choreography: each icon travels to its own
+   vertical position, one after another, instead of moving as a group. */
+@media(max-width:800px){
+  .mobile-quick-actions{
+    display:block;
+    position:fixed;
+    right:12px;
+    bottom:18px;
+    width:170px;
+    height:170px;
+    flex:none;
+    gap:0;
+    transition:none;
+  }
+  .mobile-quick-actions a{
+    position:absolute;
+    right:0;
+    bottom:0;
+    transform:none;
+    transition:right 560ms cubic-bezier(.22,.8,.25,1),
+               bottom 560ms cubic-bezier(.22,.8,.25,1);
+  }
+  .mobile-quick-actions a:nth-child(1){right:120px;bottom:0;transition-delay:0ms}
+  .mobile-quick-actions a:nth-child(2){right:60px;bottom:0;transition-delay:150ms}
+  .mobile-quick-actions a:nth-child(3){right:0;bottom:0;transition-delay:300ms}
+  .mobile-quick-actions.is-scrolled a:nth-child(1){right:0;bottom:120px}
+  .mobile-quick-actions.is-scrolled a:nth-child(2){right:0;bottom:60px}
+  .mobile-quick-actions.is-scrolled a:nth-child(3){right:0;bottom:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .mobile-quick-actions a{transition:none!important}
+}
