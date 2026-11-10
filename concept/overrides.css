@@ -51,5 +51,6 @@
 .hero>div{right:24px!important;width:min(320px,40%)!important}
 .hero .kicker{margin-bottom:.75rem}.hero h1{line-height:1.04;margin-bottom:1rem}.hero .intro{line-height:1.5;margin-bottom:1rem}.hero .actions{margin-top:.8rem}
 .categories{border-top:0}.categories .section-head,.ritual{position:relative}.categories .section-head{padding-top:1.25rem}.categories .section-head::before,.ritual::before{content:"";position:absolute;top:0;left:50%;width:100vw;border-top:1px solid var(--line);transform:translateX(-50%)}
+body{overflow-x:hidden}.ritual::before{top:var(--section)}
 @media(max-width:600px){.hero{margin-top:.75rem}.hero>div{right:8px!important;width:calc(100% - 16px)!important}}
 .hero{width:100%;max-width:none;margin:1rem 0 0}.hero figure{width:100%;max-width:none}
