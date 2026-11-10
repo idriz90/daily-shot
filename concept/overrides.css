@@ -48,5 +48,6 @@
 @media(max-width:600px){.hero{height:560px;min-height:560px}.hero>div{right:12px!important;bottom:16px!important;width:calc(100% - 24px)!important}}
 .hero{margin-top:1rem}.hero>div{right:0!important;width:min(300px,40%)!important}.hero h1,.hero .intro,.hero .kicker{text-align:right}
 .hero .kicker,.hero h1,.hero .intro{width:100%;max-width:none;margin-left:0;text-align:right}.hero .actions{justify-content:flex-end}
+.hero>div{right:24px!important;width:min(320px,40%)!important}
 @media(max-width:600px){.hero{margin-top:.75rem}.hero>div{right:8px!important;width:calc(100% - 16px)!important}}
 .hero{width:100%;max-width:none;margin:1rem 0 0}.hero figure{width:100%;max-width:none}
