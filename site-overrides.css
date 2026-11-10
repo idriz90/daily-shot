@@ -165,3 +165,11 @@ body{overflow-x:hidden}.ritual::before{top:calc(var(--section) - 1rem)}
 @media(prefers-reduced-motion:reduce){
   .mobile-quick-actions a{transition:none!important}
 }
+
+
+/* Raise the complete mobile hero text block above the quick-action icons. */
+@media(max-width:600px){
+  .hero>div{
+    bottom:76px!important;
+  }
+}
