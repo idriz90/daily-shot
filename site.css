@@ -5,3 +5,35 @@
 .legal-page h1{max-width:none;font-size:clamp(2.75rem,7vw,5rem);line-height:1}
 .legal-page h2{margin-top:2rem;font-size:clamp(1.4rem,3vw,2rem);line-height:1.2;letter-spacing:normal}
 .legal-page li+li{margin-top:.75rem}
+
+.menu-toggle{display:none}
+@media(max-width:800px){
+  html{scroll-padding-top:110px}
+  .topbar .menu-toggle:not([hidden]){
+    display:inline-flex;
+    grid-column:2;
+    grid-row:1;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    min-height:44px;
+    padding:.5rem .75rem;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--white);
+    color:var(--ink);
+    font:inherit;
+    cursor:pointer
+  }
+  .menu-toggle svg{width:20px;height:20px}
+  .topbar #main-navigation{
+    display:flex;
+    grid-column:1/-1;
+    flex-direction:column;
+    gap:0;
+    padding:.5rem 0;
+    border-top:1px solid var(--line)
+  }
+  .topbar #main-navigation a{padding:.65rem 0}
+  .topbar .menu-toggle:not([hidden])[aria-expanded="false"] + #main-navigation{display:none}
+}
