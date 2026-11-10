@@ -173,3 +173,38 @@ body{overflow-x:hidden}.ritual::before{top:calc(var(--section) - 1rem)}
     bottom:76px!important;
   }
 }
+
+
+/* Corrected mobile icon choreography: phone and map stay on-screen,
+   align with WhatsApp, and move independently into a neat vertical stack. */
+@media(max-width:800px){
+  .mobile-quick-actions{
+    display:block!important;
+    position:fixed!important;
+    right:12px!important;
+    bottom:18px!important;
+    width:170px!important;
+    height:170px!important;
+  }
+  .mobile-quick-actions a{
+    position:absolute!important;
+    width:50px!important;
+    height:50px!important;
+    margin:0!important;
+    transform:none!important;
+    transition:
+      right 560ms cubic-bezier(.22,.8,.25,1),
+      bottom 560ms cubic-bezier(.22,.8,.25,1)!important;
+  }
+  /* At the top: three buttons in one horizontal row. */
+  .mobile-quick-actions a:nth-child(1){right:120px!important;bottom:0!important;transition-delay:0ms!important}
+  .mobile-quick-actions a:nth-child(2){right:60px!important;bottom:0!important;transition-delay:150ms!important}
+  /* WhatsApp remains anchored in the same bottom-right position. */
+  .mobile-quick-actions a:nth-child(3){right:0!important;bottom:0!important;transition:none!important}
+  /* On scroll: phone and map move, one after the other, directly above WhatsApp. */
+  .mobile-quick-actions.is-scrolled a:nth-child(1){right:0!important;bottom:120px!important}
+  .mobile-quick-actions.is-scrolled a:nth-child(2){right:0!important;bottom:60px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .mobile-quick-actions a{transition:none!important}
+}
