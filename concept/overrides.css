@@ -30,3 +30,12 @@
 .hero .intro{font-size:clamp(.92rem,1.6vw,1.1rem);line-height:1.35;margin-bottom:.75rem}
 .hero .actions{margin-top:.75rem}.hero .button{padding:.65rem 1rem}
 @media(max-width:600px){.hero{aspect-ratio:auto;min-height:520px}.hero figure{height:230px}.hero>div{width:100%;padding:1.5rem;bottom:0}.hero h1{font-size:2.8rem}.hero .actions{flex-direction:row;align-items:center;justify-content:flex-end}}
+.topbar{min-height:102px}.brand{width:112px}.brand img{width:76px;height:76px}.brand span{font-size:.72rem}
+.hero{height:430px;min-height:430px;aspect-ratio:auto;background:#111}
+.hero::after{background:rgba(0,0,0,.08)}
+.hero>div{right:28px!important;bottom:28px!important;width:min(430px,calc(100% - 56px))!important;background:rgba(10,10,10,.8);padding:1.5rem 1.6rem!important;text-shadow:none}
+.hero h1{font-size:clamp(2.45rem,4vw,3.15rem);line-height:.92;margin:0 0 .85rem;max-width:10ch}
+.hero .intro{font-size:1rem;line-height:1.4;margin:0 0 .9rem;max-width:35ch}
+.hero .actions{margin:.5rem 0 0;gap:1rem;flex-wrap:wrap}.hero .button{padding:.65rem 1rem}.hero .kicker{margin-bottom:.65rem}
+.categories{padding-top:clamp(4rem,6vw,6rem)}.categories .section-head{margin-bottom:clamp(2.5rem,4vw,4rem)}.categories .section-head h2{font-size:clamp(3rem,5vw,5rem)}
+@media(max-width:600px){.topbar{min-height:92px}.brand img{width:62px;height:62px}.hero{height:570px;min-height:570px}.hero figure{height:100%}.hero>div{right:16px!important;bottom:16px!important;width:calc(100% - 32px)!important}.hero h1{font-size:2.55rem}.hero .actions{justify-content:flex-end}}
