@@ -220,3 +220,15 @@ body{overflow-x:hidden}.ritual::before{top:calc(var(--section) - 1rem)}
     bottom:calc(18px + env(safe-area-inset-bottom, 0px))!important;
   }
 }
+
+
+/* Final Safari mobile spacing: move the hero text and opening-hours CTA
+   further up, leaving clear space above the fixed contact shortcuts. */
+@media(max-width:800px){
+  .hero>div{
+    bottom:190px!important;
+  }
+  .mobile-quick-actions{
+    bottom:calc(18px + env(safe-area-inset-bottom, 0px))!important;
+  }
+}
