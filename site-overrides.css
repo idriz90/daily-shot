@@ -79,3 +79,28 @@ body{overflow-x:hidden}.ritual::before{top:calc(var(--section) - 1rem)}
 @media(max-width:600px){
   .hero figure img{object-position:44% 50%;transform:translateY(8px) scale(1.03)}
 }
+
+
+/* Smoothly animate the quick-action buttons between row and column layouts. */
+@media(max-width:800px){
+  .mobile-quick-actions{
+    display:grid;
+    grid-template-columns:repeat(3,50px);
+    grid-template-rows:50px;
+    grid-auto-flow:row;
+    column-gap:10px;
+    row-gap:10px;
+    transition:
+      grid-template-columns 650ms cubic-bezier(.22,.8,.25,1),
+      grid-template-rows 650ms cubic-bezier(.22,.8,.25,1),
+      column-gap 650ms ease,
+      row-gap 650ms ease;
+  }
+  .mobile-quick-actions.is-scrolled{
+    grid-template-columns:50px;
+    grid-template-rows:repeat(3,50px);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .mobile-quick-actions{transition:none!important}
+}
