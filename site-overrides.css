@@ -58,3 +58,24 @@ body{overflow-x:hidden}.ritual::before{top:calc(var(--section) - 1rem)}
 @media(max-width:800px){.mobile-quick-actions .quick-phone{background:#fff;color:var(--wine)}.mobile-quick-actions .quick-map{background:conic-gradient(from 35deg,#4285f4 0 27%,#34a853 27% 52%,#fbbc04 52% 74%,#ea4335 74% 100%);color:#fff}}
 @media(max-width:600px){.hero{margin-top:.75rem}.hero>div{right:8px!important;width:calc(100% - 16px)!important}}
 .hero{width:100%;max-width:none;margin:1rem 0 0}.hero figure{width:100%;max-width:none}
+
+
+/* Mobile refinements: reveal the full shop sign and adapt quick actions on scroll. */
+@media(max-width:800px){
+  .hero figure img{
+    object-position:44% 50%;
+    transform:translateY(8px) scale(1.03);
+  }
+  .mobile-quick-actions{
+    flex-direction:row;
+    align-items:center;
+    gap:10px;
+  }
+  .mobile-quick-actions.is-scrolled{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+@media(max-width:600px){
+  .hero figure img{object-position:44% 50%;transform:translateY(8px) scale(1.03)}
+}
